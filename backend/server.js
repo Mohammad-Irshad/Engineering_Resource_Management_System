@@ -28,6 +28,12 @@ mongoose.connection.on("error", (err) => {
   console.error("MongoDB connection error:", err);
 });
 
+//Welcome api
+
+app.use("/", (req, res) => {
+  res.send("Welcome to Mohammad Irshad's Server");
+});
+
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/engineers", engineerRoutes);
